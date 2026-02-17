@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🎀 Win ₹5,000 Birthday Special 🎀</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: "Comic Sans MS", cursive;
+            background: linear-gradient(135deg, #ffb6d9, #ffd6eb);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 60px;
+            font-size: 36px;
+            color: #d63384;
+        }
+
+        h2 {
+            color: #c2185b;
+        }
+
+        .egg-container {
+            margin-top: 40px;
+        }
+
+        .egg {
+            font-size: 100px;
+            cursor: pointer;
+            margin: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .egg:hover {
+            transform: scale(1.3) rotate(10deg);
+        }
+
+        #message {
+            font-size: 26px;
+            margin-top: 30px;
+            color: #880e4f;
+            min-height: 70px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            border: none;
+            background-color: #ff69b4;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h1>💸 CLICK TO WIN ₹5,000 INR 💸</h1>
+<h2>🥚 Pick One Egg Princess 🥚</h2>
+
+<div class="egg-container">
+    <span class="egg" onclick="pickEgg()">🥚</span>
+    <span class="egg" onclick="pickEgg()">🥚</span>
+    <span class="egg" onclick="pickEgg()">🥚</span>
+</div>
+
+<div id="message"></div>
+<div id="retry"></div>
+
+<script>
+let attempts = 0;
+
+function pickEgg() {
+    attempts++;
+
+    if (attempts < 4) {
+        document.getElementById("message").innerHTML = "😢 Oops! That egg was empty... Try again!";
+        document.getElementById("retry").innerHTML = "<button onclick='resetGame()'>Try Again 💕</button>";
+    } else {
+        document.getElementById("message").innerHTML = 
+        "🎉 YOU WON ₹5,000!!! 🎉 <br><br> 👑 Congratulations Queen! <br><br> A cash voucher will be sent to your email 💌";
+        
+        document.getElementById("retry").innerHTML = "";
+    }
+}
+
+function resetGame() {
+    document.getElementById("message").innerHTML = "";
+    document.getElementById("retry").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
