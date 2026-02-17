@@ -65,7 +65,7 @@
 <body>
 
 <h1>💸 CLICK TO WIN ₹5,000 INR 💸</h1>
-<h2>🥚 Pick One Egg Princess 🥚</h2>
+<h2> Pick One Egg Princess 🥚</h2>
 
 <div class="egg-container">
     <span class="egg" onclick="pickEgg()">🥚</span>
@@ -82,12 +82,12 @@ let attempts = 0;
 function pickEgg() {
     attempts++;
 
-    if (attempts < 4) {
+    if (attempts < 3) {
         document.getElementById("message").innerHTML = "😢 Oops! That egg was empty... Try again!";
         document.getElementById("retry").innerHTML = "<button onclick='resetGame()'>Try Again 💕</button>";
     } else {
         document.getElementById("message").innerHTML = 
-        "🎉 YOU WON ₹5,000!!! 🎉 <br><br> 👑 Congratulations Queen! <br><br> A cash voucher will be sent to your email 💌";
+        "🎉 YOU WON ₹5,000!!! 🎉 <br><br>  Congratulations Queen! 👑 <br><br> A cash voucher will be sent to your email 💌";
         
         document.getElementById("retry").innerHTML = "";
     }
@@ -101,3 +101,4 @@ function resetGame() {
 
 </body>
 </html>
+
