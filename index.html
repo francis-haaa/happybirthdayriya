@@ -106,8 +106,8 @@ button:hover {
 <body>
 
 <div class="card">
-    <h1>A Birthday Game </h1>
-    <div class="name"> Hello Riyaapi </div>
+    <h1> Hello Riyaapi </h1>
+    <div class="name"> Here's a birthday game for you </div>
     <div class="subtitle">
         Pick an Egg
     </div>
@@ -130,14 +130,14 @@ function pickEgg() {
 
     if (attempts < 3) {
         document.getElementById("message").innerText =
-        "Alas, not this one. You may attempt once more.";
+        " You Lost. Try Again ";
         document.getElementById("action").innerHTML =
         "<button onclick='resetGame()'>Try Again</button>";
     } else {
         document.getElementById("message").innerHTML =
         "<span class='win'>You have WON!! Wooohoo 🎉 </span><br>The prize awaits you.";
         document.getElementById("action").innerHTML =
-        "<button onclick='goToVoucher()'>Reveal My Gift</button>";
+        "<button onclick='goToVoucher()'>Claim your Gift</button>";
     }
 }
 
@@ -153,5 +153,6 @@ function goToVoucher() {
 
 </body>
 </html>
+
 
 
