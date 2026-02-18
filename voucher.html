@@ -3,99 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> CASH VOUCHER </title>
+<title>Riya's Cash Voucher</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
-    margin: 0;
-    background: linear-gradient(135deg, #f3c6d3, #f9e4ec);
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+  margin: 0;
+  background: linear-gradient(135deg, #ffd6e8, #ffc0dd, #ffe6f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
 }
 
-.voucher-card {
-    background: white;
-    width: 100%;
-    max-width: 520px;
-    border-radius: 30px;
-    overflow: hidden;
-    box-shadow: 0 25px 60px rgba(173, 20, 87, 0.2);
-    text-align: center;
+.voucher {
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.image-container {
-    position: relative;
+.voucher::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 192, 203, 0.3);
+  border-radius: 50%;
 }
 
-.image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
+.voucher::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 182, 193, 0.3);
+  border-radius: 50%;
 }
 
-.overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255,255,255,0.85);
-    padding: 15px 25px;
-    border-radius: 20px;
-    text-align: center;
-    backdrop-filter: blur(6px);
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #d63384;
 }
 
 .amount {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    color: #8e244d;
+  font-size: 60px;
+  font-weight: 700;
+  color: #ff2e88;
+  margin: 20px 0;
 }
 
-.details {
-    padding: 35px 25px 45px;
+.message {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-.name {
-    font-family: 'Great Vibes', cursive;
-    font-size: 40px;
-    color: #c2185b;
-    margin-bottom: 10px;
+.footer {
+  font-size: 14px;
+  color: #999;
 }
 
-.text {
-    font-size: 14px;
-    color: #6d4c57;
-    line-height: 1.6;
+.stamp {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 2px dashed #ff69b4;
+  padding: 8px 15px;
+  font-size: 12px;
+  color: #ff69b4;
+  border-radius: 10px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="voucher-card">
+<div class="voucher">
+  <div class="stamp">BESTIE APPROVED</div>
 
-    <div class="image-container">
-        <!-- CHANGE FILE NAME BELOW IF YOUR IMAGE IS DIFFERENT -->
-        <img src="riya-voucher.jpg" alt="Riya Birthday Image">
+  <h1>Happy Birthday Riya 💖</h1>
 
-        <div class="overlay">
-            <div class="amount">₹5,000</div>
-        </div>
-    </div>
+  <div class="amount">₹5,000</div>
 
-    <div class="details">
-        <div class="name">For Riya George </div>
-        <div class="text">
-            A cash voucher of five thousand rupees,<br>
-            with love, Ochuppi and Elsamma
-        </div>
-    </div>
+  <div class="message">
+    You officially won the birthday game.  
+    Cash voucher  
+    sponsored with love by  
+    <strong>Elsamma & Ochuppi</strong>.
+    <br><br>
+    Spend it. Save it. Spoil yourself.
+    You deserve everything, princess.
+  </div>
+
+  <div class="footer">
+    Valid forever ♡ | No expiry | No drama
+  </div>
 
 </div>
 
