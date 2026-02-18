@@ -3,102 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lady Riya's Birthday Surprise</title>
+<title>Riya's Birthday Game</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    background: linear-gradient(135deg, #f9e4ec, #f3c6d3);
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe3ec, #ffd1dc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .card {
-    background: rgba(255,255,255,0.88);
-    backdrop-filter: blur(10px);
-    width: 100%;
-    max-width: 480px;
-    padding: 55px 35px;
-    border-radius: 32px;
-    text-align: center;
-    box-shadow: 0 25px 60px rgba(173, 20, 87, 0.15);
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 45px 30px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    color: #8e244d;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
-}
-
-.name {
-    font-family: 'Great Vibes', cursive;
-    font-size: 48px;
-    color: #c2185b;
-    margin-bottom: 20px;
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #c2185b;
 }
 
 .subtitle {
-    font-size: 14px;
-    color: #6d4c57;
-    margin-bottom: 35px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 35px;
 }
 
 .eggs {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .egg {
-    font-size: 50px;
-    cursor: pointer;
-    transition: transform 0.3s ease, filter 0.3s ease;
+  font-size: 46px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .egg:hover {
-    transform: translateY(-8px);
-    filter: drop-shadow(0 6px 8px rgba(194,24,91,0.25));
+  transform: translateY(-6px);
 }
 
 .message {
-    margin-top: 35px;
-    min-height: 50px;
-    font-size: 14px;
-    color: #6d4c57;
+  margin-top: 30px;
+  min-height: 48px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
 }
 
 button {
-    margin-top: 22px;
-    padding: 12px 28px;
-    border-radius: 50px;
-    border: none;
-    background: linear-gradient(to right, #c2185b, #ad1457);
-    color: white;
-    font-weight: 500;
-    letter-spacing: 0.6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  margin-top: 18px;
+  padding: 12px 22px;
+  border-radius: 50px;
+  border: none;
+  background: #e91e63;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 28px rgba(173,20,87,0.35);
+  background: #d81b60;
+  transform: scale(1.04);
 }
 
 .win {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: #8e244d;
+  font-weight: 600;
+  color: #c2185b;
 }
 </style>
 </head>
@@ -106,48 +97,47 @@ button:hover {
 <body>
 
 <div class="card">
-    <h1>A Birthday Game For</h1>
-    <div class="name">Lady Riya 👸 </div>
-    <div class="subtitle">
-       Choose an egg wisely to reveal your royal surprise.
-    </div>
+  <h1>Hi Riya 🤍</h1>
+  <div class="subtitle">
+    Pick one and see if today is your lucky day.
+  </div>
 
-    <div class="eggs">
-        <div class="egg" onclick="pickEgg()">🥚</div>
-        <div class="egg" onclick="pickEgg()">🥚</div>
-        <div class="egg" onclick="pickEgg()">🥚</div>
-    </div>
+  <div class="eggs">
+    <div class="egg" onclick="pickEgg()">🥚</div>
+    <div class="egg" onclick="pickEgg()">🥚</div>
+    <div class="egg" onclick="pickEgg()">🥚</div>
+  </div>
 
-    <div class="message" id="message"></div>
-    <div id="action"></div>
+  <div class="message" id="message"></div>
+  <div id="action"></div>
 </div>
 
 <script>
 let attempts = 0;
 
 function pickEgg() {
-    attempts++;
+  attempts++;
 
-    if (attempts < 4) {
-        document.getElementById("message").innerText =
-        "Alas, not this one. You may attempt once more.";
-        document.getElementById("action").innerHTML =
-        "<button onclick='resetGame()'>Try Again</button>";
-    } else {
-        document.getElementById("message").innerHTML =
-        "<span class='win'>You have WON, Lady Riya.</span><br>The prize awaits you.";
-        document.getElementById("action").innerHTML =
-        "<button onclick='goToVoucher()'>Reveal My Gift</button>";
-    }
+  if (attempts < 4) {
+    document.getElementById("message").innerText =
+      "Not this one. Try again, princess.";
+    document.getElementById("action").innerHTML =
+      "<button onclick='resetGame()'>Try Again</button>";
+  } else {
+    document.getElementById("message").innerHTML =
+      "<span class='win'>Okay fine. You win.</span><br>Go see your gift.";
+    document.getElementById("action").innerHTML =
+      "<button onclick='goToVoucher()'>Open My Gift</button>";
+  }
 }
 
 function resetGame() {
-    document.getElementById("message").innerText = "";
-    document.getElementById("action").innerHTML = "";
+  document.getElementById("message").innerText = "";
+  document.getElementById("action").innerHTML = "";
 }
 
 function goToVoucher() {
-    window.location.href = "voucher.html";
+  window.location.href = "voucher.html";
 }
 </script>
 
