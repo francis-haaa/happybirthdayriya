@@ -3,52 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Gift</title>
+<title>Riya's Cash Voucher</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ffd1dc, #ffe3ec);
+  background: linear-gradient(135deg, #ffd6e8, #ffc0dd, #ffe6f1);
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
 }
 
 .voucher {
   background: white;
-  width: 100%;
-  max-width: 460px;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.voucher img {
-  width: 100%;
-  display: block;
+.voucher::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 192, 203, 0.3);
+  border-radius: 50%;
 }
 
-.content {
-  padding: 35px 25px 45px;
+.voucher::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 182, 193, 0.3);
+  border-radius: 50%;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #d63384;
 }
 
 .amount {
-  font-size: 36px;
-  font-weight: 600;
-  color: #c2185b;
-  margin-bottom: 15px;
+  font-size: 60px;
+  font-weight: 700;
+  color: #ff2e88;
+  margin: 20px 0;
 }
 
-.text {
-  font-size: 14px;
+.message {
+  font-size: 16px;
   color: #555;
   line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.footer {
+  font-size: 14px;
+  color: #999;
+}
+
+.stamp {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 2px dashed #ff69b4;
+  padding: 8px 15px;
+  font-size: 12px;
+  color: #ff69b4;
+  border-radius: 10px;
 }
 </style>
 </head>
@@ -56,18 +94,24 @@ body {
 <body>
 
 <div class="voucher">
+  <div class="stamp">BESTIE APPROVED</div>
 
-  <!-- CHANGE THIS FILE NAME TO MATCH YOUR IMAGE -->
-  <img src="voucher-photo.jpg" alt="Riya and bestie">
+  <h1>Happy Birthday Riya 💖</h1>
 
-  <div class="content">
-    <div class="amount">₹5,000</div>
-    <div class="text">
-      For you, Riya.<br><br>
-      For all the late night talks, the chaos,
-      the plans, the growth, the inside jokes.<br><br>
-      Happy birthday. I love you.
-    </div>
+  <div class="amount">₹5,000</div>
+
+  <div class="message">
+    You officially won the birthday game.  
+    This is your real-life cash voucher  
+    sponsored with love by  
+    <strong>Elsamma & Ochuppi</strong>.
+    <br><br>
+    Spend it. Save it. Spoil yourself.
+    You deserve everything, princess.
+  </div>
+
+  <div class="footer">
+    Valid forever ♡ | No expiry | No drama
   </div>
 
 </div>
