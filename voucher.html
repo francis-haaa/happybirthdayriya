@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> CASH VOUCHER </title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #f3c6d3, #f9e4ec);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.voucher-card {
+    background: white;
+    width: 100%;
+    max-width: 520px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(173, 20, 87, 0.2);
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.85);
+    padding: 15px 25px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+}
+
+.amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #8e244d;
+}
+
+.details {
+    padding: 35px 25px 45px;
+}
+
+.name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    color: #c2185b;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 14px;
+    color: #6d4c57;
+    line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="voucher-card">
+
+    <div class="image-container">
+        <!-- CHANGE FILE NAME BELOW IF YOUR IMAGE IS DIFFERENT -->
+        <img src="riya-voucher.jpg" alt="Riya Birthday Image">
+
+        <div class="overlay">
+            <div class="amount">₹5,000</div>
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="name">For Riya George </div>
+        <div class="text">
+            A cash voucher of five thousand rupees,<br>
+            with love, Ochuppi and Elsamma
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
